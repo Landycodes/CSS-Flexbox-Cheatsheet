@@ -1,0 +1,131 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #0096FF;
+    --bckrnd: #36454F;
+    --sub: #7393B3;
+}
+body {
+    background-color: var(--bckrnd);
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Title*/
+header h1 {
+    color: var(--blue);
+}
+/*subheadings*/
+h5 {
+    color: var(--sub);
+    width: 40%;
+    text-align: center;
+    padding: 5px;
+}
+header h5 {
+    margin-bottom: 3%;
+}
+form h5 {
+    width: 90%;
+    text-align: left;
+    
+}
+/*form and header glow*/
+form h2 {
+    transition: all 0.2s ease-in-out;
+}
+form:hover,
+form:hover h2 {
+    cursor: pointer;
+    box-shadow: inset 0 0 8px
+    rgb(2, 144, 246), 0 0 15px
+    rgb(2, 144, 246);
+
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    align-content: space-around;
+}
+
+/*boxes*/
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px white dashed;
+    height: auto; width: 270px;
+    margin: 10px;
+    margin-top: 20px;
+    transition: padding 1s ease-in-out;
+}
+form:hover {
+    padding: 2px;
+}
+
+/*box title*/
+h2 {
+    position: relative;
+    text-align: center;
+    border: 3px white solid;
+    border-radius: 6px;
+    width: 90%;
+    background-color: var(--bckrnd);
+    color: var(--blue);
+    margin-top: -20px;
+}
+/*scripts to copy*/
+pre {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 14px;
+    width: 85%; height: 85%;
+    background-color: var(--blue);
+    background-image: linear-gradient(
+        rgba(0, 58.82, 100, 0.3) 0%,
+        rgba(0, 58.82, 100, 0.6) 100%
+    );
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+pre:active {
+    user-select: all;
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+    color: var(--sub);
+    font-weight: bolder;
+}
+
+
+@media screen and (min-width: 768px){
+    .grid {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+@media screen and (max-width: 768px){
+    .grid {
+        grid-template-columns: repeat(1, auto);
+    }
+}
+@media screen and (min-width: 992px){
+    .grid {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+                                
